@@ -1,0 +1,15 @@
+<h1>Total People in <%= params[:nation].gsub('+nation', '').capitalize %> Nation: <%= @avatar_search_data[:total_people] %></h1>
+
+<ul>
+  <% @avatar_search_data[:members].each do |member| %>
+    <li class="member">
+      <h2><%= member[:name] %></h2>
+      <% if member[:photo] %>
+        <%= image_tag member[:photo] %>
+      <% end %>
+      <p>Allies: <%= member[:allies]&.join(', ') || 'None' %></p>
+      <p>Enemies: <%= member[:enemies]&.join(', ') || 'None' %></p>
+      <p>Affiliations: <%= member[:affiliations]&.empty? ? 'None' : member[:affiliations] %></p>
+    </li>
+  <% end %>
+</ul>
