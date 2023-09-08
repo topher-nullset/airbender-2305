@@ -7,8 +7,8 @@
       <% if member[:photo] %>
         <%= image_tag member[:photo] %>
       <% end %>
-      <p>Allies: <%= member[:allies]&.join(', ') || 'None' %></p>
-      <p>Enemies: <%= member[:enemies]&.join(', ') || 'None' %></p>
+      <p>Allies: <%= member[:allies].present? ? member[:allies].join(', ') : 'None' %></p>
+      <p>Enemies: <%= member[:enemies].present? ? member[:enemies].join(', ') : 'None' %></p>
       <p>Affiliations: <%= member[:affiliations]&.empty? ? 'None' : member[:affiliations] %></p>
     </li>
   <% end %>
