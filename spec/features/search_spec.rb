@@ -10,7 +10,7 @@ RSpec.describe 'Avatar Search' do
 
     expect(current_path).to eq(search_path)
     save_and_open_page
-    expect(page).to have_content('Total People in Fire Nation:')
+    expect(page).to have_content('Total People in Fire Nation: 97')
     expect(page).to have_content('Azula')
     expect(page).to have_content('Allies: Ozai, Zuko')
     expect(page).to have_content('Enemies: Iroh, Zuko, Kuei, Long Feng, Mai, Ty Lee, Ursa')
