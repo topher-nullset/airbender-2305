@@ -12,6 +12,7 @@ RSpec.describe 'Avatar Search' do
     save_and_open_page
     expect(page).to have_content('Total People in Fire Nation: 97')
     expect(page).to have_content('Azula')
+    expect(page).to have_css('img[src="https://vignette.wikia.nocookie.net/avatar/images/1/12/Azula.png/revision/latest?cb=20140905084941"]')
     expect(page).to have_content('Allies: Ozai, Zuko')
     expect(page).to have_content('Enemies: Iroh, Zuko, Kuei, Long Feng, Mai, Ty Lee, Ursa')
     expect(page).to have_content("Affiliations: Azula's team (formerly) Dai Li (formerly) Fire Nation Fire Nation Royal Family Fire Warriors Royal Fire Academy for Girls (formerly)")
